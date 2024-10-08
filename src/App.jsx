@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import PersosPage from './pages/PersosPage';
 import PersoDetailPage from './pages/PersoDetailPage';
 import ItemsPage from './pages/ItemsPages';
+import ItemDetail from './component/ItemDetail';
 
 function App() {
  
@@ -19,7 +20,7 @@ function App() {
   <Route path="/persos" element= {<PersosPage></PersosPage>}></Route>
   <Route path='/perso/:PersoName' element={<PersoDetailPage></PersoDetailPage>} ></Route>
   <Route path="/items" element= {<ItemsPage></ItemsPage>}></Route>
-  {/* <Route path='/item/:ItemName' element={<ItemDetailPage></ItemDetailPage>} ></Route> */}
+  <Route path='/item/:itemName' element={<ItemDetail></ItemDetail>} ></Route> 
 
 
 
