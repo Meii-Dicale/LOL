@@ -26,7 +26,7 @@ const PersoDetailPage = () => {
     return (
         <div className="d-flex align-items-center justify-content-center"
             style={{
-                backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${PersoName}_0.jpg)`,
+                backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${PersoName}_0.jpg)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 height: '100vh',

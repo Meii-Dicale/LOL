@@ -4,7 +4,7 @@
 
 .navbar{
   
-    background-image: linear-gradient(black, rgb(219, 154, 55));
+    background-image: linear-gradient(#091428, rgb(219, 154, 55));
 }   
 
 body {
@@ -28,4 +28,31 @@ body {
 .card:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+.fontnav {
+    color: rgb(219, 154, 55) ;
+    font-size: 3vh;
+    text-decoration: none;
+}
+.fontnav:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#detailcard:hover{
+    transform: none;
+    cursor: auto;
+
+}
+
+@media screen and (min-width: 768px ){
+    #detailcard {
+        display: flex;
+        flex-direction: column;
+    }
+    #liste-groupe {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }

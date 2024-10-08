@@ -34,7 +34,7 @@ const PersosPage = () => {
     backgroundAttachment: 'fixed',
 }}>
 <Container  >
-    <div className="d-flex flex-row flex-wrap justify-content-center gap-3">
+    <div className="d-flex flex-row flex-wrap justify-content-center gap-5">
 {Object.entries(persos).map((perso) => {
     console.log(perso);
             return  <PersoCard persoCard={perso[1]} PersoName={perso[0]} key={perso[1].id}></PersoCard>

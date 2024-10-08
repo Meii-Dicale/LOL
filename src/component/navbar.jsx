@@ -8,12 +8,12 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container >
-        <Navbar.Brand > <img className="logo" src="./Lol_logo.png" alt="logo" /></Navbar.Brand>
+        <Navbar.Brand > <Link to={'./'}><img className="logo fontnav" src="./Lol_logo.png" alt="logo" /></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto ">
-            <Link to={'./'}>Accueil</Link>
-            <Link to={'./persos'}>Personnages</Link>
+          <Nav className="me-auto gap-4">
+            <Link className='fontnav' to={'./'}>Accueil</Link>
+            <Link className='fontnav' to={'./persos'}>Personnages</Link>
 
           </Nav>
         </Navbar.Collapse>
