@@ -3,5 +3,29 @@
 }
 
 .navbar{
-    background-color: black !important;
+  
+    background-image: linear-gradient(black, rgb(219, 154, 55));
 }   
+
+body {
+    font-family: 'league' !important;
+    
+}
+
+@font-face {
+    font-family: 'league';
+    src: url('./League.otf') format('otf');
+    
+}
+.persofont {
+    color: rgb(219, 154, 55) !important;
+    font-size: 3vh !important;
+    background-color: rgba(66, 34, 170, 0.605)!important;
+    border-radius: 20px!important;
+    display: flex!important;
+    justify-content: center!important;
+}
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
