@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import PersosPage from './pages/PersosPage';
 import PersoDetailPage from './pages/PersoDetailPage';
+import ItemsPage from './pages/ItemsPages';
 
 function App() {
  
@@ -17,7 +18,8 @@ function App() {
   <Route path="/" element={<HomePage></HomePage>}></Route>
   <Route path="/persos" element= {<PersosPage></PersosPage>}></Route>
   <Route path='/perso/:PersoName' element={<PersoDetailPage></PersoDetailPage>} ></Route>
-
+  <Route path="/items" element= {<ItemsPage></ItemsPage>}></Route>
+  {/* <Route path='/item/:ItemName' element={<ItemDetailPage></ItemDetailPage>} ></Route> */}
 
 
 

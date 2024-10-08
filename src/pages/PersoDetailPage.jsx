@@ -28,9 +28,8 @@ const PersoDetailPage = () => {
             style={{
                 backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${PersoName}_0.jpg)`,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '100vh',
-                width: '100vw'
+                backgroundAttachment: 'fixed',
+
             }}
         >
             <Container className="d-flex align-items-center justify-content-center">

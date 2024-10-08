@@ -14,7 +14,7 @@ function NavBar() {
           <Nav className="me-auto gap-4">
             <Link className='fontnav' to={'./'}>Accueil</Link>
             <Link className='fontnav' to={'./persos'}>Personnages</Link>
-
+            <Link className='fontnav' to={'./items'}>Objets</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
