@@ -18,16 +18,22 @@ body {
     
 }
 .background-container {
-    min-height: 100vh; /* Assure que le conteneur prend toute la hauteur de la fenêtre */
-    background-image: url('./fondperso.jpg'); /* Chemin vers votre image */
-    background-size: cover; /* Couvre toute la zone */
-    background-position: center; /* Centre l'image */
-    background-attachment: fixed; /* Fixe l'image en arrière-plan lors du défilement */
-    display: flex; /* Permet d'utiliser flexbox pour centrer les éléments */
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: center; /* Centre horizontalement le contenu */
+    min-height: 100vh; 
+    background-image: url('../fondperso.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
   }
-  
+
+.itembg {
+    background-image:  url(../fonditem.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
 .persofont {
     color: rgb(219, 154, 55) !important;
     font-size: 3vh !important;

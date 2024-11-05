@@ -37,7 +37,7 @@ function NavBar() {
           <Form className="d-flex" onSubmit={handleSearchSubmit}>
             <FormControl
               type="search"
-              placeholder="Rechercher"
+              placeholder="Entrez un personnage ..."
               className="me-2"
               aria-label="Search"
               value={searchTerm}
