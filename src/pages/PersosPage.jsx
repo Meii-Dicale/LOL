@@ -1,49 +1,47 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import PersosService from "../services/PersosService";
-import PersoCard from "../component/PersoCard";
+import PersoCard from "../component/PersoCard.jsx";
 import { Container } from "react-bootstrap";
-
-
-
+import "../App.css" ;
 const PersosPage = () => {
     const [persos, setPersos] = useState({});
+    const location = useLocation();
     
+    // Obtenez le terme de recherche depuis l'URL
+    const searchParams = new URLSearchParams(location.search);
+    const searchTerm = searchParams.get('search') || '';
 
     const fetchPersos = async () => {
-
         try {
             const response = await PersosService.getAllPersos();
-            console.log(response.data.data);
             setPersos(response.data.data);
-
         } catch (error) {
             console.error(error);
-
-
         }
-    }
+    };
 
     useEffect(() => {
-
         fetchPersos();
-    }, [])
+    }, []);
 
-    return <>
-    <div className="d-flex align-items-center flex-column "style={{ backgroundImage: 'url(./fondperso.jpg)',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
-}}>
-<Container  >
-    <div className="d-flex flex-row flex-wrap justify-content-center gap-5 mt-5">
-{Object.entries(persos).map((perso) => {
-    console.log(perso);
-            return  <PersoCard persoCard={perso[1]} PersoName={perso[0]} key={perso[1].id}></PersoCard>
-        })}
-</div>
-</Container>
-</div>
-    </>
+    // Filtrer les personnages en fonction du terme de recherche
+    const filteredPersos = Object.entries(persos).filter(([name]) =>
+        name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
-}
+    return (
+        <div className="background-container">
+          <Container>
+            <div className="d-flex flex-row flex-wrap justify-content-center gap-5 mt-5">
+              {filteredPersos.map(([name, perso]) => (
+                <PersoCard persoCard={perso} PersoName={name} key={perso.id} />
+              ))}
+            </div>
+          </Container>
+        </div>
+      );
+      
+};
 
 export default PersosPage;

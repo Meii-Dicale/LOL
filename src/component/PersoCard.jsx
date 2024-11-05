@@ -13,7 +13,8 @@ function PersoCard({persoCard, PersoName}) {
 
     return (
       <Card style={{ width: '18rem',
-        backgroundColor: 'rgba(240, 248, 255, 0.631)'
+        backgroundColor: 'rgba(240, 248, 255, 0.631)',
+        borderRadius: '2  rem' 
        }} 
        onClick={() => {navigateTo(PersoName)}}>
         <Card.Img style={{borderRadius: '30px'}} variant="top" src={"https://ddragon.leagueoflegends.com/cdn/14.19.1/img/champion/"+PersoName+".png"} />
